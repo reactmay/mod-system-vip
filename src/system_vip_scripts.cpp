@@ -309,8 +309,8 @@ public:
             break;
         case 10:
             // Sistema teleports
-            AddGossipItemFor(player, 0, "|TInterface/GUILDBANKFRAME/UI-GuildBankFrame-NewTab:28:28:-15:0|t Añadir nuevo.", 0, 1, "Имя, чтобы сохранить координаты.", 0, true);
-            AddGossipItemFor(player, 0, "|TInterface/PAPERDOLLINFOFRAME/UI-GearManager-Undo:28:28:-15:0|t Eliminar.", 0, 2, "Имя для удаления.", 0, true);
+            AddGossipItemFor(player, 0, "|TInterface/GUILDBANKFRAME/UI-GuildBankFrame-NewTab:28:28:-15:0|t Добавить новый.", 0, 1, "Имя, чтобы сохранить координаты.", 0, true);
+            AddGossipItemFor(player, 0, "|TInterface/PAPERDOLLINFOFRAME/UI-GearManager-Undo:28:28:-15:0|t Удалить.", 0, 2, "Введите имя для удаления.", 0, true);
             sV->getTeleports(player);
             SendGossipMenuFor(player, 1, creature->GetGUID());
             break;
