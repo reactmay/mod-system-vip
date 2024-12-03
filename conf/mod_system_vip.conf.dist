@@ -5,7 +5,7 @@
 ########################################
 #
 #    SystemVip.Announce
-#        Description: Habilita un mensaje de modulo al iniciar sesión.
+#        Description: Включите сообщение модуля при входе в систему.
 #        Default:     0 - Disabled
 #                     1 - Enabled
 #
@@ -15,7 +15,7 @@ SystemVip.Announce = 0
 ########################################
 #
 #    SystemVip.TimeVip
-#        Description: Tiempo en días para añadir por cada suscripción.
+#        Description: Время в днях, которое необходимо добавить для каждой подписки
 #        Default:     7
 #
 
@@ -24,7 +24,7 @@ SystemVip.TimeVip = 7
 ########################################
 #
 #    SystemVip.Token
-#        Description: Token para comprar una suscripción VIP
+#        Description: Токен для покупки VIP-подписки
 #        Default:    29736
 #
 
@@ -33,7 +33,7 @@ SystemVip.Token = 29736
 ########################################
 #
 #    SystemVip.TokenAmount
-#        Description: Cantidad necesaria.
+#        Description: Необходимое количество
 #        Default:     10
 #
 
@@ -42,7 +42,7 @@ SystemVip.TokenAmount = 10
 ########################################
 #
 #    SystemVip.TokenIcon
-#        Description: Ícono del token
+#        Description: Значок токена
 #        Default:     "|TInterface/ICONS/inv_misc_rune_05:15:15:-15:0|t"
 #
 
@@ -53,7 +53,7 @@ SystemVip.TokenIcon = "|TInterface/ICONS/inv_misc_rune_05:15:15:-15:0|t"
 ########################################
 #
 #    SystemVip.LoginAnnounce
-#        Description: Activa un anuncio especial de bienvenida para usuarios VIP.
+#        Description: Активируйте специальное приветственное объявление для VIP-пользователей.
 #        Default:     0 - Disabled
 #                     1 - Enabled
 #
@@ -63,16 +63,16 @@ SystemVip.LoginAnnounce = 0
 ########################################
 #
 #    SystemVip.LoginAnnounceMessage
-#        Description: Mensaje a mostrar en el mensaje de bienvenida. El símbolo %s es el nombre del jugador.
+#        Description: Сообщение для отображения в приветственном сообщении. Символ %s — это имя игрока.
 #        Default:     "Player Vip: %s se ha conectado."
 #
 
-SystemVip.LoginAnnounceMessage = "Player Vip: %s se ha conectado."
+SystemVip.LoginAnnounceMessage = "ИГРОК Vip: %s зашел в мир."
 
 ########################################
 #
 #    SystemVip.EnableRateCustom
-#        Description: Activa tasas personalizadas para usuarios VIP
+#        Description: Активируйте персональные рейты для VIP-пользователей
 #        Default:     0 - Disabled
 #                     1 - Enabled
 #
@@ -82,7 +82,7 @@ SystemVip.EnableRateCustom = 0
 ########################################
 #
 #    SystemVip.RateXP
-#        Description: Define la cantidad de tasa de experiencia para usuarios VIP. Define 1 si deseas una tasa normal.
+#        Description: Определяет сумму опыта для VIP-пользователей. Установите 1, если хотите нормальную скорость.
 #        Default:     1
 #
 
@@ -91,7 +91,7 @@ SystemVip.RateXP = 1
 ########################################
 #
 #    SystemVip.ProfessionRate
-#        Description: Define la cantidad de tasa de profesiones para usuarios VIP. Define 1 si deseas una tasa normal.
+#        Description: Определяет рейты профессии для VIP-пользователей. Установите 1, если хотите нормальную скорость.
 #        Default:     1
 #
 
@@ -100,7 +100,7 @@ SystemVip.ProfessionRate = 1
 ########################################
 #
 #    SystemVip.GoldRate
-#        Description: Define la cantidad de tasa de oro para usuarios VIP. Define 1 si deseas una tasa normal.
+#        Description: Определяет рейты золота для VIP-пользователей. Установите 1, если хотите нормальную скорость.
 #        Default:     1
 #
 
@@ -109,7 +109,7 @@ SystemVip.GoldRate = 1
 ########################################
 #
 #    SystemVip.HonorRate
-#        Description: Define la cantidad de tasa para ganar honor para usuarios VIP. Define 1 si deseas una tasa normal.
+#        Description: Определяет рейты чести для VIP-пользователей. Установите 1, если хотите нормальную скорость.
 #        Default:     1
 #
 
@@ -118,7 +118,7 @@ SystemVip.HonorRate = 1
 ########################################
 #
 #    SystemVip.GhostMount
-#        Description: Activa una montura cuando el jugador VIP muere y se convierte en fantasma
+#        Description: Активирует скакуна, когда VIP-игрок умирает и становится призраком.
 #        Default:     0 - Disabled
 #                     1 - Enabled
 #
