@@ -10,7 +10,7 @@ void SystemVip::LoadConfig() {
     TimeVip = sConfigMgr->GetOption<uint32>("SystemVip.TimeVip", 7) * 86400;
     TokenEntry = sConfigMgr->GetOption<uint32>("SystemVip.Token", 123);
     TokenAmount = sConfigMgr->GetOption<uint32>("SystemVip.TokenAmount", 10);
-    TokenIcon = sConfigMgr->GetOption<string>("SystemVip.TokenIcon", "|TInterface/ICONS/inv_misc_rune_05:15:15:-15:0|t ");
+    TokenIcon = sConfigMgr->GetOption<string>("SystemVip.TokenIcon", "|TInterface/ICONS/inv_misc_elvencoins:15:15:-15:0|t ");
 
     loginAnnounce = sConfigMgr->GetOption<bool>("SystemVip.LoginAnnounce", false);
     loginMessage = sConfigMgr->GetOption<string>("SystemVip.LoginAnnounceMessage", "Player Vip: %s se ha conectado.");

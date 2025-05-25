@@ -202,7 +202,7 @@ public:
         if(sV->armorRep)
             AddGossipItemFor(player, 0, "|TInterface/ICONS/INV_Hammer_20:28:28:-15:0|t Ремонт брони.", 0, 2);
         if(sV->bankEnable)
-            AddGossipItemFor(player, 0, "|TInterface/ICONS/INV_Ingot_03:28:28:-15:0|t Mi Банк.", 0, 3);
+            AddGossipItemFor(player, 0, "|TInterface/ICONS/INV_Ingot_03:28:28:-15:0|t Банк.", 0, 3);
         if(sV->mailEnable)
             AddGossipItemFor(player, 0, "|TInterface/ICONS/inv_letter_15:28:28:-15:0|t Почта.", 0, 8);
         if (sV->buffsEnable)
