@@ -82,11 +82,11 @@ public:
     bool OnGossipHello(Player* player, Creature* creature)
     {
         ClearGossipMenuFor(player);
-        AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/INV_Misc_Coin_02:28:28:-15:0|t Suscripción Vip.", 0, 1, "Хотите подписаться на VIP-систему на 7 дней?\nЦена: " + to_string(sV->TokenAmount) + "\n " + sV->TokenIcon + " " +sV->getItemLink(sV->TokenEntry, player), 0, false);
-        AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/INV_Misc_QuestionMark:28:28:-15:0|t Информация.", 0, 2);
+        AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/INV_Misc_Coin_02:28:28:-15:0|t Купить VIP", 0, 1, "Хотите подписаться на VIP-систему на 7 дней?\nЦена: " + to_string(sV->TokenAmount) + "\n " + sV->TokenIcon + " " +sV->getItemLink(sV->TokenEntry, player), 0, false);
+        AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/INV_Misc_QuestionMark:28:28:-15:0|t Информация", 0, 2);
         if(sV->isVip(player))
-            AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/ability_hunter_beastcall:28:28:-15:0|t Верните моего VIP-питомца.", 0, 4);
-        AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/Trade_Engineering:28:28:-15:0|t Закрыть.", 0, 3);
+            AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/ability_hunter_beastcall:28:28:-15:0|t Верните моего VIP-питомца", 0, 4);
+        AddGossipItemFor(player, GOSSIP_ICON_TALK, "|TInterface/ICONS/Trade_Engineering:28:28:-15:0|t Закрыть", 0, 3);
         SendGossipMenuFor(player, 1, creature->GetGUID());
         return true;
     }
@@ -105,19 +105,19 @@ public:
                     if (!player->HasItemCount(44824, 1, true))
                         player->AddItem(44824, 1);
 
-                    ChatHandler(player->GetSession()).PSendSysMessage("Спасибо за VIP-подписку.");
+                    ChatHandler(player->GetSession()).PSendSysMessage("Спасибо за VIP-подписку");
                     ChatHandler(player->GetSession()).PSendSysMessage("Доступно время VIP-подписки: %s", sV->getFormatedVipTime(player).c_str());
                     OnGossipSelect(player, creature, 0, 2);
                 }
                 else
                 {
-                    ChatHandler(player->GetSession()).PSendSysMessage("У вас недостаточно токенов.");
+                    ChatHandler(player->GetSession()).PSendSysMessage("У вас недостаточно токенов");
                     CloseGossipMenuFor(player);
                 }
                 break;
             case 2:
                 sV->sendGossipInformation(player, true);
-                AddGossipItemFor(player, 0, "|TInterface/ICONS/Trade_Engineering:28:28:-15:0|t Закрыть.", 0, 3);
+                AddGossipItemFor(player, 0, "|TInterface/ICONS/Trade_Engineering:28:28:-15:0|t Закрыть", 0, 3);
                 SendGossipMenuFor(player, VENDOR_INFO, creature->GetGUID());
                 break;
             case 4:
@@ -129,7 +129,7 @@ public:
                 }
                 else
                 {
-                    creature->Whisper("У вас уже есть предмет для вызова VIP-питомца.", LANG_UNIVERSAL, player, false);
+                    creature->Whisper("У вас уже есть предмет для вызова VIP-питомца", LANG_UNIVERSAL, player, false);
                     OnGossipHello(player, creature);
                 }
                 break;
