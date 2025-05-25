@@ -88,7 +88,7 @@ string SystemVip::getFormatedVipTime(Player* player) {
     minutes = minutes % 60;
     // int seconds = time % 60;
 
-    string result = to_string(days) + "dias " + to_string(hours) + "horas " + to_string(minutes) + "minutos.";
+    string result = to_string(days) + "д. " + to_string(hours) + "ч. " + to_string(minutes) + "м.";
     return result;
 }
 
@@ -110,47 +110,47 @@ string SystemVip::getInformationVip(Player* player) {
     std::ostringstream text;
     std::string accName;
     if (AccountMgr::GetName(player->GetSession()->GetAccountId(), accName))
-        text << "Tiempo restante: |CFF0DD617" << getFormatedVipTime(player) << "|r\n";
+        text << "Оставшееся время: |CFF0DD617" << getFormatedVipTime(player) << "|r\n";
 
     return text.str();
 }
 
 string SystemVip::getInformationAdavantages() {
     std::ostringstream text;
-    text << "Beneficios:\n";
+    text << "Преимущества:\n";
     text << "----------------------------------\n";
     if(loginAnnounce)
-        text << "|TInterface/ICONS/Spell_unused2:15:15:-10:-5|t Anuncio al iniciar sesión." << "\n";
+        text << "|TInterface/ICONS/Spell_unused2:15:15:-10:-5|t Объявление при входе в мир." << "\n";
     if (rateCustom) {
-        text << "|TInterface/ICONS/Achievement_BG_KillXEnemies_GeneralsRoom:15:15:-10:-8|t Rate XP           x " << rateXp << "\n";
-        text << "|TInterface/ICONS/Achievement_BG_overcome500disadvantage:15:15:-10:-8|t Rate profesiones  x " << professionRate << "\n";
-        text << "|TInterface/ICONS/Achievement_BG_ABshutout:15:15:-10:-8|t Rate de oro       x " << goldRate << "\n";
-        text << "|TInterface/ICONS/Achievement_BG_kill_carrier_opposing_flagroom:15:15:-10::-8|t Rate honor        x " << honorRate << "\n";
+        text << "|TInterface/ICONS/Achievement_BG_KillXEnemies_GeneralsRoom:15:15:-10:-8|t Рейты опыта           x " << rateXp << "\n";
+        text << "|TInterface/ICONS/Achievement_BG_overcome500disadvantage:15:15:-10:-8|t Рейты профессии  x " << professionRate << "\n";
+        text << "|TInterface/ICONS/Achievement_BG_ABshutout:15:15:-10:-8|t Рейты золота       x " << goldRate << "\n";
+        text << "|TInterface/ICONS/Achievement_BG_kill_carrier_opposing_flagroom:15:15:-10::-8|t Рейты очков чести        x " << honorRate << "\n";
     }
     if(ghostMount)
-        text << "|TInterface/ICONS/ability_vanish:15:15:-10::-8|t Velocidad al ser fantasma." << "\n";
+        text << "|TInterface/ICONS/ability_vanish:15:15:-10::-8|tМаунт при смерте в режиме призрака." << "\n";
     if (petEnable) {
-        text << "|TInterface/ICONS/ability_hunter_beastcall:15:15:-10::-8|t Mascota VIP." << "\n";
+        text << "|TInterface/ICONS/ability_hunter_beastcall:15:15:-10::-8|t VIP-питомец." << "\n";
         if(vipZone)
-            text << "|TInterface/ICONS/Achievement_Zone_ZulDrak_12:15:15:-10::-8|t Zona Vip." << "\n";
+            text << "|TInterface/ICONS/Achievement_Zone_ZulDrak_12:15:15:-10::-8|t VIP-зона." << "\n";
         if(armorRep)
-            text << "|TInterface/ICONS/INV_Hammer_20:15:15:-10::-8|t Reparar Armaduras." << "\n";
+            text << "|TInterface/ICONS/INV_Hammer_20:15:15:-10::-8|t Ремонт брони." << "\n";
         if(bankEnable)
-            text << "|TInterface/ICONS/INV_Ingot_03:15:15:-10::-8|t Banco personal." << "\n";
+            text << "|TInterface/ICONS/INV_Ingot_03:15:15:-10::-8|t Банк." << "\n";
         if(mailEnable)
-            text << "|TInterface/ICONS/inv_letter_15:15:15:-10::-8|t Abrir correo." << "\n";
+            text << "|TInterface/ICONS/inv_letter_15:15:15:-10::-8|t Почта." << "\n";
         if(buffsEnable)
-            text << "|TInterface/ICONS/Spell_Magic_GreaterBlessingofKings:15:15:-10::-8|t Buffos VIP." << "\n";
+            text << "|TInterface/ICONS/Spell_Magic_GreaterBlessingofKings:15:15:-10::-8|t VIP Баффы." << "\n";
         if(refreshEnable)
-            text << "|TInterface/ICONS/Spell_Holy_LayOnHands:15:15:-10::-8|t Restaurar hp/mana." << "\n";
+            text << "|TInterface/ICONS/Spell_Holy_LayOnHands:15:15:-10::-8|t Восстановление здоровья и маны." << "\n";
         if(sicknessEnbale)
-            text << "|TInterface/ICONS/spell_shadow_deathscream:15:15:-10::-8|t Eliminar dolencia." << "\n";
+            text << "|TInterface/ICONS/spell_shadow_deathscream:15:15:-10::-8|t Устранить недуг." << "\n";
         if(deserterEnable)
-            text << "|TInterface/ICONS/ability_druid_cower:15:15:-10::-8|t Eliminar desertor." << "\n";
+            text << "|TInterface/ICONS/ability_druid_cower:15:15:-10::-8|t Убрать дезертирство." << "\n";
         if(resetInstance)
-            text << "|TInterface/ICONS/Achievement_Dungeon_Icecrown_IcecrownEntrance:15:15:-10::-8|t Reiniciar instancias." << "\n";
+            text << "|TInterface/ICONS/Achievement_Dungeon_Icecrown_IcecrownEntrance:15:15:-10::-8|t Сброс кд подземелий." << "\n";
         if(saveTeleport)
-            text << "|TInterface/ICONS/Spell_Holy_LightsGrace:15:15:-10::-8|t Guardar zonas para teleport." << "\n";
+            text << "|TInterface/ICONS/Spell_Holy_LightsGrace:15:15:-10::-8|t Сохранение зон для телепорта." << "\n";
     }
     return text.str();
 }
@@ -159,19 +159,19 @@ void SystemVip::sendGossipInformation(Player* player, bool advantages) {
     std::ostringstream text;
     std::string accName;
     if (AccountMgr::GetName(player->GetSession()->GetAccountId(), accName))
-        text << "Usuario: |CFF0E3CE6" << accName << "|r\n";
+        text << "Пользователь: |CFF0E3CE6" << accName << "|r\n";
 
     if (isVip(player)) {
-        text << "Tiempo restante: |CFF0DD617" << getFormatedVipTime(player) << "|r\n\n";
-        text << "Gracias por comprar una suscripcion vip.\n\n";
+        text << "Оставшееся время: |CFF0DD617" << getFormatedVipTime(player) << "|r\n\n";
+        text << "Благодарим вас за приобретение VIP-подписки.\n\n";
     }
     else {
-        text << "No tienes una suscripción vip disponible.\n";
-        text << "Compra una suscripción y disfruta de todos los beneficios de ser vip!\n";
+        text << "У вас нет VIP-подписки.\n";
+        text << "Купите подписку и наслаждайтесь всеми преимуществами VIP-статуса!\n";
     }
 
     if (advantages) {
-        text << "Recuerda que al comprar vip tienes beneficios en todos los personajes de tu cuenta." << "\n";
+        text << "Помните, что при покупке VIP вы получаете преимущества для всех персонажей в своем аккаунте." << "\n";
         text << getInformationAdavantages();
     }
 
@@ -236,13 +236,13 @@ void SystemVip::addTeleportVip(Player* player, string name) {
     uint32 id = 1;
     if (teleportMap.count(accountId) > 0) {
         if (teleportMap[accountId].size() == saveTeleportAmount) {
-            ChatHandler(player->GetSession()).PSendSysMessage("No puedes guardar mas Teleports!");
+            ChatHandler(player->GetSession()).PSendSysMessage("Вы не можете сохранить больше телепортов!");
             return;
         }
 
         for (size_t i = 0; i < teleportMap[accountId].size(); i++) {
             if (teleportMap[accountId][i].name == teleport.name) {
-                ChatHandler(player->GetSession()).PSendSysMessage("Ya existe un teleport con el mismo nombre!");
+                ChatHandler(player->GetSession()).PSendSysMessage("Телепорт с таким названием уже существует!");
                 return;
             }
         }
@@ -251,7 +251,7 @@ void SystemVip::addTeleportVip(Player* player, string name) {
     teleport.id = id;
     teleportMap[accountId].push_back(teleport);
     LoginDatabase.Execute("INSERT INTO account_vip_teleport VALUES ( {} , '{}', {}, {}, {}, {}, {} );", accountId, name, teleport.mapId, teleport.coord_x, teleport.coord_y, teleport.coord_z, teleport.orientation);
-    ChatHandler(player->GetSession()).PSendSysMessage("Ubicación guardada con exito.");
+    ChatHandler(player->GetSession()).PSendSysMessage("Местоположение успешно сохранено.");
 }
 
 void SystemVip::delTeleportVip(Player* player, string name) {
@@ -263,14 +263,14 @@ void SystemVip::delTeleportVip(Player* player, string name) {
             return;
         }
     }
-    ChatHandler(player->GetSession()).PSendSysMessage("Nombre incorrecto.");
+    ChatHandler(player->GetSession()).PSendSysMessage("Неправильное имя.");
 }
 
 void SystemVip::getTeleports(Player* player) {
     uint32 accountId = player->GetSession()->GetAccountId();
     if( teleportMap.count(accountId) != 0){
         for (size_t i = 0; i < teleportMap[accountId].size(); i++) {
-            AddGossipItemFor(player, 0, "|TInterface/CURSOR/Taxi:28:28:-15:0|t "+teleportMap[accountId][i].name, teleportMap[accountId][i].id, 12, "Quieres teletransportarte?", 0, false);
+            AddGossipItemFor(player, 0, "|TInterface/CURSOR/Taxi:28:28:-15:0|t "+teleportMap[accountId][i].name, teleportMap[accountId][i].id, 12, "Хотите телепортироваться?", 0, false);
         }
     }
 }
